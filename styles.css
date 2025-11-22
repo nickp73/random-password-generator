@@ -1,0 +1,203 @@
+/* Use border-box to prevent padding from causing elements to overflow their containers */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1C1C1C;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.Container {
+    background-color: #1F2937;
+    padding: 2rem;
+    border-radius: 6px;
+    max-width: 500px;
+    width: 90%;
+    margin: 1rem;
+}
+
+.Heading {
+    font-family: 'Karla', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.Heading span:first-child {
+    color: white;
+}
+
+.Heading span:last-child {
+    color: #4ADF86;
+}
+
+.SupportingText {
+    color: #D5D4D8;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.Button {
+    background-color: #10B981;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 auto 2rem; /* center the button and keep spacing below */
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+    width: 90%;
+    max-width: 100%; /* never exceed the container width */
+    text-align: center;
+}
+
+.Button:hover {
+    background-color: #059669;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
+}
+
+.Button:active {
+    background-color: #047857;
+    box-shadow: 0 2px 6px rgba(16, 185, 129, 0.3);
+}
+
+.Text {
+    pointer-events: none;
+}
+
+.password-field {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid #4ADF86;
+    border-radius: 6px;
+
+
+}
+
+.password-output {
+    background-color: #273549;
+    border-radius: 6px;
+    padding: 15px 20px;
+    flex-grow: 1;
+    text-align: center;
+    color: #55F991;
+    font-size: 1rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.copy-btn {
+    background-color: #10B981;
+    color: white;
+    border: none;
+    border-radius: 0;
+    padding: 15px 20px;
+    cursor: pointer;
+    margin-left: 0;
+    flex-shrink: 0;
+
+}
+
+.copy-btn:hover {
+    background-color: #00b359; /* Slightly darker green on hover */
+}
+
+.copy-btn:active {
+    transform: scale(0.98); /* Nice pressing effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .Container {
+        padding: 1.5rem;
+        width: 95%;
+        margin: 0.5rem;
+    }
+
+    .Heading {
+        font-size: 2rem;
+    }
+
+    .SupportingText {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .Button {
+        width: 100%;
+        padding: 0.875rem 1.5rem;
+        font-size: 1.05rem;
+        display: block;
+    }
+
+    .password-output {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+        word-break: break-all;
+    }
+
+    .copy-btn {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .Container {
+        padding: 1rem;
+        width: 98%;
+        margin: 0.25rem;
+    }
+
+    .Heading {
+        font-size: 1.5rem;
+    }
+
+    .SupportingText {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .Button {
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+
+    .password-field {
+        flex-direction: column;
+        margin-bottom: 12px;
+    }
+
+    .password-output {
+        font-size: 0.85rem;
+        padding: 12px;
+        border-radius: 6px 6px 0 0;
+        min-height: 2.5rem;
+    }
+
+    .copy-btn {
+        border-radius: 0 0 6px 6px;
+        padding: 12px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+}

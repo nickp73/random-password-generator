@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<title>Random Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="Container">
+	<div class="PopulatedState">
+		<div class="Heading"><span>Random</span><span> password generator</span></div>
+		<div class="SupportingText">Never use <span>password</span> or<span> password1</span> again.</div>
+		<div class="Button">
+			<div class="Text">Generate passwords</div>
+		</div>
+		<div class="password-field">
+			<div id="passwordDisplayOne" class="password-output">Click generate to create password</div>
+			<button class="copy-btn" onclick="copyPassword('passwordDisplayOne')">Copy 1</button>
+		</div>
+
+		<div class="password-field">
+			<div id="passwordDisplayTwo" class="password-output">Click generate to create password</div>
+			<button class="copy-btn" onclick="copyPassword('passwordDisplayTwo')">Copy 2</button>
+		</div>
+	</div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
